@@ -50,17 +50,6 @@
                 </connection>
             </yarmolich_product_read>
         </resources>
-        <events>
-            <catalog_product_save_after>
-                <observers>
-                    <yarmolich_product>
-                        <type>singleton</type>
-                        <class>yarmolich_product/observer</class>
-                        <method>saveProductHistory</method>
-                    </yarmolich_product>
-                </observers>
-            </catalog_product_save_after>
-        </events>
     </global>
     <admin>
         <routers>
@@ -81,5 +70,16 @@
                 </yarmolich_product>
             </updates>
         </layout>
+        <events>
+            <catalog_product_save_after>
+                <observers>
+                    <yarmolich_product>
+                        <type>singleton</type>
+                        <class>yarmolich_product/observer</class>
+                        <method>saveProductHistory</method>
+                    </yarmolich_product>
+                </observers>
+            </catalog_product_save_after>
+        </events>
     </adminhtml>
 </config>

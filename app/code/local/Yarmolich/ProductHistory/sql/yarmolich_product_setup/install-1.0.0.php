@@ -21,10 +21,12 @@ $table = $installer->getConnection()
     )
     ->addColumn(
         'product_id',
-        Varien_Db_Ddl_Table::TYPE_TEXT,
-        32,
+        Varien_Db_Ddl_Table::TYPE_INTEGER,
+        150,
         [
-            'nullable'  => true,
+            'unsigned'  => true,
+            'nullable'  => false,
+            'primary'   => true,
         ],
         'Product Id'
     )
@@ -48,7 +50,7 @@ $table = $installer->getConnection()
     )
     ->addColumn(
         'date',
-        Varien_Db_Ddl_Table::TYPE_DATE,
+        Varien_Db_Ddl_Table::TYPE_TEXT,
         null,
         [
             'nullable'  => true,
@@ -63,6 +65,18 @@ $table = $installer->getConnection()
             'nullable'  => false,
         ],
         'Type'
+    )
+    ->addForeignKey(
+        $installer->getFkName(
+            'product_history',
+            'product_id',
+            'catalog_product_entity',
+            'entity_id'),
+        'product_id',
+        $installer->getTable('catalog_product_entity'),
+        'entity_id',
+        Varien_Db_Ddl_Table::ACTION_CASCADE,
+        Varien_Db_Ddl_Table::ACTION_CASCADE
     );
 
 $installer->getConnection()->createTable($table);

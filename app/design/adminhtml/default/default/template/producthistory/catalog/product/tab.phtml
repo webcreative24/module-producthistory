@@ -1,0 +1,7 @@
+<?php
+/** @var Yarmolich_ProductHistory_Block_Adminhtml_Catalog_Product_History_Info $this */
+?>
+<h3>Update History</h3>
+<?php if ($this->getProductId()): ?>
+    Product was created: <?php echo $this->getProductCreated(); ?> by <?php echo $this->getProductAuthor(); ?>
+<?php endif; ?>

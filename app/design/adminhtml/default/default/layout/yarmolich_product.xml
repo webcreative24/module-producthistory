@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_catalog_product_inject_tab>
+        <reference name="product_tabs">
+            <action method="addTab">
+                <name>product_history</name>
+                <block>yarmolich_product/adminhtml_catalog_product_tab</block>
+            </action>
+        </reference>
+    </adminhtml_catalog_product_inject_tab>
+
+    <adminhtml_catalog_product_edit>
+        <update handle="adminhtml_catalog_product_inject_tab"/>
+    </adminhtml_catalog_product_edit>
+
+    <adminhtml_catalog_product_history>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="yarmolich_product/adminhtml_catalog_product_history_info" name="catalog.product.edit.tab.history.info"/>
+            <block type="yarmolich_product/adminhtml_catalog_product_tab_history" name="catalog.product.edit.tab.history"/>
+        </block>
+    </adminhtml_catalog_product_history>
+</layout>

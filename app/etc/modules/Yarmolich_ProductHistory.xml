@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Yarmolich_ProductHistory>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Yarmolich_ProductHistory>
+    </modules>
+</config>

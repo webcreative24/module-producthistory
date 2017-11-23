@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <yarmolich translate="label" module="yarmolich_product">
+            <label>Yarmolich Modules</label>
+            <sort_order>100</sort_order>
+        </yarmolich>
+    </tabs>
+    <sections>
+        <yarmolich translate="label" module="yarmolich_product">
+            <label>History Settings</label>
+            <tab>yarmolich</tab>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <yarmolich_group translate="label" module="yarmolich_product">
+                    <label>History Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+
+                    <fields>
+                        <yarmolich_select translate="label">
+                            <label>Collect History: </label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </yarmolich_select>
+                    </fields>
+                </yarmolich_group>
+            </groups>
+        </yarmolich>
+    </sections>
+</config>
